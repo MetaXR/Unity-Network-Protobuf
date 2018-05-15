@@ -1,0 +1,63 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol";
+
+enum ENetworkMessage{
+    KEEP_ALIVE_SYNC=0;
+    OFFLINE_SYNC=1;
+	ROOM_KEY_SYNC=2; //声网key刷新
+	
+	
+	//进入大厅请求，返回
+	ENTER_LIVE_HALL_REQ=100;
+	ENTER_LIVE_HALL_RSP=101;
+	ENTER_LIVE_HALL_SYNC=102;
+	
+	//退出大厅请求，返回
+	EXIT_LIVE_HALL_REQ=103;
+	EXIT_LIVE_HALL_RSP=104;
+	
+	//进入一个直播房间请求，返回，同步
+	ENTER_LIVE_ROOM_REQ=105;
+	ENTER_LIVE_ROOM_RSP=106;
+	ENTER_LIVE_ROOM_SYNC=107;
+	
+	//退出一个直播房间请求，返回，同步
+	EXIT_LIVE_ROOM_REQ=108;
+	EXIT_LIVE_ROOM_RSP=109;
+	EXIT_LIVE_ROOM_SYNC=110;
+	
+	//移动位置请求，返回，同步
+	MOVE_POSITION_REQ=111;
+	MOVE_POSITION_RSP=112;
+	MOVE_POSITION_SYNC=113;
+	
+	//说话状态请求，返回，同步
+	TALKING_REQ=114;
+	TALKING_RSP=115;
+	TALKING_SYNC=116;
+	
+	//坐下状态请求，返回，同步
+	SITTING_REQ=117;
+	SITTING_RSP=118;
+	SITTING_SYNC=119;
+	
+	//发送表情请求，返回，同步
+	SEND_CHAT_REQ=120;
+	SEND_CHAT_RSP=121;
+	RECEIVE_CHAT_SYNC=122;
+	
+	//抢麦请求，返回，同步
+	GRAB_MICROPHONE_REQ=123;
+	GRAB_MICROPHONE_RSP=124;
+	GRAB_MICROPHONE_SYNC=125;
+	
+	//直播状态同步
+	LIVE_STATE_SYNC=126;
+	//公告信息同步
+	ANNOUNCEMENT_SYNC=127;
+	
+	PUT_BRICK_REQ=128;
+	PUT_BRICK_RSP=129;
+	PUT_BRICK_SYNC=130;
+}

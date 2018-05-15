@@ -1,0 +1,25 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Data";
+
+message ChatItem{
+	enum ChatType{
+    	TEXT = 0;   // 文本
+		IMAGE = 1;  // 表情
+	}
+	
+	enum TargetType{
+    	SYSTEM = 0; // 系统消息，所有用户都会收到
+    	LIVE = 1;   // 直播消息，直播id为receiveId的用户都会收到
+		ROOM = 2;   // 房间消息，房间id为receiveId的用户都会收到
+		PRIVATE = 3;// 私聊消息，用户id为receiveId的用户会收到
+	}
+	
+	optional TargetType targetType = 1[default = LIVE]; // 消息类型
+	optional string sendUserId= 2;// 发送者id
+	required string receiveId= 3; // 直播id或房间id
+	required ChatType chatType= 4;// 消息类型
+	required string chatBody= 5;  // 消息内容
+	optional int64 date = 6;  // 发送时间
+	optional string sendUserName = 7;// 发送者昵称
+}

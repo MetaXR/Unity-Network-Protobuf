@@ -1,0 +1,8 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+import "ChatData.proto";
+
+message ReceiveChatSync{
+	repeated ChatItem chatData = 1;
+}

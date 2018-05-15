@@ -1,0 +1,30 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+
+import "MovePositionMsg.proto";
+
+message PutBrickReq{
+	required string userId = 1; // 用户id
+	required string brickId = 2;
+	required int32 state = 3; // 砖块状态，0空地，1左手，2右手，3成功放到指定位置
+	optional Float3 position = 4;
+	optional Float3 direction = 5;
+}
+
+message PutBrickRsp{
+	enum ResultCode{
+    	SUCCESS = 0;
+		FAIL = 1;
+	}
+	required ResultCode resultCode = 1;
+	optional string resultMessage = 2;
+}
+
+message PutBrickSync{
+	required string brickId = 1; // 砖块id
+	required int32 state = 2;
+	optional string userId = 3;
+	optional Float3 position = 4;
+	optional Float3 direction = 5;
+}

@@ -1,0 +1,9 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+
+message KeepAliveSync{
+	optional int32 a=1;
+	optional bool b=2;
+	optional string c=3;
+}

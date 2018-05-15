@@ -1,0 +1,34 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+
+message Float3{
+	required float x = 1;
+	required float y = 2;
+	required float z = 3;
+}
+
+message MovePositionReq{
+	required string userId = 1; // 用户id
+	required Float3 position = 2;
+	optional Float3 direction = 3;
+	optional Float3 speed = 4;
+	optional int32 mode = 5;
+}
+
+message MovePositionRsp{
+	enum ResultCode{
+    	SUCCESS = 0;
+		FAIL = 1;
+	}
+	required ResultCode resultCode = 1;
+	optional string resultMessage = 2;
+}
+
+message MovePositionSync{
+	required string userId = 1; // 移动用户
+	required Float3 position = 2;
+	optional Float3 direction = 3;
+	optional Float3 speed = 4;
+	optional int32 mode = 5;
+}

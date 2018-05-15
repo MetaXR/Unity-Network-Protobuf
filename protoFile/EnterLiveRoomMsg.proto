@@ -1,0 +1,48 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+import "UserData.proto";
+import "GrabMicrophoneMsg.proto";
+import "AnnouncementData.proto";
+import "PutBrickMsg.proto";
+
+message EnterLiveRoomReq{
+	required string liveId = 1; // 直播id
+	required string userId = 2; // 用户id
+}
+
+message EnterLiveRoomRsp{
+	enum ResultCode{
+    	SUCCESS = 0;
+		FAIL = 1;
+	}
+	required ResultCode resultCode = 1;
+	optional string roomId = 2; // 直播房间id(liveId_roomNo)
+	repeated UserItem users = 3; // 直播房间内所有用户(包含自己)
+	optional string resultMessage = 4; // 分配直播房间失败描述
+	optional string roomKey = 5; // 直播房间声网key，每隔5分钟同步一次
+	optional GrabMicrophoneSync microphone = 6; // 当前直播抢麦状态
+	optional int32 state = 7; // 当前直播状态，0未开始，1开始未推流，2推流，3结束
+	repeated AnnouncementItem announcements = 8; // 当前公告
+	repeated PutBrickSync bricks = 9; // 当前砖块
+}
+
+message EnterLiveRoomSync{
+	repeated UserItem users = 1; // 直播房间内用户增加后的所有用户
+}
+
+message LiveStateSync{
+	required int32 state = 1; // 当前直播状态，0未开始，1开始未推流，2推流，3结束
+}
+
+message RoomKeySync{
+	required string roomKey = 1; // 直播房间声网key
+}
+
+message AnnouncementSync{
+	repeated AnnouncementItem announcements = 1; // 公告同步
+}
+
+message LiveRoomsRsp{
+	repeated string rooms = 1;
+}

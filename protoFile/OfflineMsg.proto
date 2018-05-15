@@ -1,0 +1,13 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+
+message OfflineSync{
+	//下线原因
+	enum CauseCode{
+		ANOTHER_LOGIN=0;//其他设备登录
+		KEEP_ALIVE_FALSE=1;
+	}
+	required CauseCode causeCode =1;
+	
+}

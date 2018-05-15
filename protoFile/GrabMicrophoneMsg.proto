@@ -1,0 +1,26 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+import "UserData.proto";
+
+message GrabMicrophoneReq{
+	required string userId = 1; // 用户id
+}
+
+message GrabMicrophoneRsp{
+	enum ResultCode{
+    	SUCCESS = 0;
+			FAIL = 1;
+	}
+	required ResultCode resultCode = 1;
+	optional string resultMessage = 2;
+}
+
+message GrabMicrophoneSync{
+	required int32 state = 1 [default = 0]; // 抢麦状态：0初始状态不抢麦，1开始抢麦或抢麦中，2抢麦成功并开始对话，抢麦成功者对话结束重新归0
+	required int64 timeNow = 2;		  // 当前后台时间（抢麦开始或抢麦中表示当前倒计时；抢麦成功时，表示说话倒计时）
+ 	optional int64 timeEnd = 3;		// 麦克风状态结束时间
+	optional int32 usersGrab = 4;	  // 已抢麦人数
+	optional UserItem userGrabed = 5; // 抢麦成功者
+	optional string keyGrabed = 6; // 抢麦成功后分配的声网KEY值
+}

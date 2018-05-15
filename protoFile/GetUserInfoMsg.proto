@@ -1,0 +1,18 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+import "UserData.proto";
+
+message GetUserInfoReq{
+	repeated string targetUserId = 1 ;
+}
+
+message GetUserInfoRsp{
+	enum ResultCode{
+		SUCCESS = 0;//搜索到用户
+		FAIL = 1;//未搜索到用户
+		USER_NOT_EXIST = 2;//用户不存在
+	}
+	required ResultCode resultCode = 1;
+	repeated UserItem userItem = 2;
+}

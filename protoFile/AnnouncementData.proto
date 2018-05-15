@@ -1,0 +1,9 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Data";
+
+message AnnouncementItem{
+	required int32 announcementId= 1;	// 发布id
+	required string text = 2;	// 发布内容
+	required int64 date = 3;	// 发布时间
+}

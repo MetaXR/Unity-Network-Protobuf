@@ -1,0 +1,15 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Data";
+
+message LiveItem{
+	required string liveId = 1; // 直播id
+	required string title = 2;  // 直播标题
+	required string description = 3; // 直播描述
+	required string image = 4;  // 直播图片
+	required string create_at = 5; // 直播创建时间
+	required int64 begin_time = 6; // 直播开始时间
+	required int64 end_time = 7;   // 直播结束时间
+	required int32 state = 8[default = 0]; // 直播状态，0未开始，1已开始，2已结束
+	optional int32 enabled = 9; // 直播是否可用（此参数仅供Web端使用，返回给客户端时已过滤掉不可用）
+}

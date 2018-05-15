@@ -1,0 +1,22 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+	
+message SittingReq{
+	required string userId = 1; // 用户id
+	required int32 sitting = 2 [default = 0]; // 0表示站立，1表示坐下
+}
+
+message SittingRsp{
+	enum ResultCode{
+    	SUCCESS = 0;
+		FAIL = 1;
+	}
+	required ResultCode resultCode = 1;
+	optional string resultMessage = 2;
+}
+
+message SittingSync{
+	required string userId = 1; // 坐下用户
+	required int32 sitting = 2;
+}

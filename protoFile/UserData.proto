@@ -1,0 +1,20 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Data";
+
+import "MovePositionMsg.proto";
+
+message UserItem{
+	required string userId = 1; // 用户id
+	required string userName = 2; // 昵称
+	optional int32  headIndex = 3; // 头像索引
+	optional int32  sex = 4; // 性别，0女，1男
+	optional Float3 position = 5; // 位置
+	optional int32 talking = 6 [default = 0]; // 说话状态，0没有说话，1有在说话
+	optional int32 sitting = 7 [default = 0]; // 坐下状态，0站立，1坐下
+	optional string icon = 8; // 头像地址
+	optional int32 regId = 9; // 注册id
+	optional Float3 direction = 10; // 朝向
+	optional Float3 speed = 11; // 速度
+	optional int32 move = 12; // 移动方式
+}

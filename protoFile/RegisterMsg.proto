@@ -1,0 +1,41 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+
+message UserInfo {
+	required string userId = 1;
+	required string userName = 2;
+	optional int32 headIndex = 3;
+	optional int32 userSex = 4;
+	optional int64 birthday = 5;
+}
+	
+message RegisterRsp {
+
+	enum ResultCode{
+		SUCCESS = 0;  //表示注册成功
+	    USER_EXIST = 1;   //表示用户名已存在
+	}
+	
+    required ResultCode resultCode = 1;        
+}
+
+message GetUserRsp {
+
+	enum ResultCode{
+		SUCCESS = 0;  //表示查询成功
+	    FAILED = 1;   //表示用户不存在
+	}
+	
+    required ResultCode resultCode = 1;
+    optional UserInfo user = 2;        
+}
+
+message UpdateUserRsp {
+	enum ResultCode{
+		SUCCESS = 0;  //表示更新成功
+	    FAILED = 1;   //表示更新失败
+	}
+	
+    required ResultCode resultCode = 1;
+}

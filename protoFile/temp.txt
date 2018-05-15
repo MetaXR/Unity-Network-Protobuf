@@ -1,0 +1,114 @@
+case ENetworkMessage.ENTER_LIVEHALL_RSP: package protocol;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: option javapackage = "com.levr.live.protocol";
+case ENetworkMessage.ENTER_LIVEHALL_RSP: enum ENetworkMessage{
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     KEEPALIVESYNC=0;
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     REGISTERREQ=1;
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     REGISTERRSP=2;
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     LOGINREQ=3;
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     LOGINRSP=4;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	PERSONALSETTINGSREQ=5;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	PERSONALSETTINGSRSP=6;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETUSERINFOREQ=7;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETUSERINFORSP=8;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ADDFRIENDREQ=9;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ADDFRIENDRSP=10;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	DELETEFRIENDREQ=11;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	DELETEFRIENDRSP=12;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	OFFLINESYNC=13;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	LOGOUTREQ=14;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	LOGOUTRSP=15;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETPERSONALINFOREQ=16;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETPERSONALINFORSP=17;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CHANGEFRIENDSYNC=18;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	SENDCHATREQ=19;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	SENDCHATRSP=20;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	RECEIVECHATSYNC=21;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CREATEGROUPCHAT
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CREATEGROUPCHAT
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CHANGEGROUPREQ=24;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CHANGEGROUPRSP=25;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CHANGEGROUPSYNC=26;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETGROUPINFO
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETGROUPINFO
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//进入大厅请求，返�?	ENTERLIVEHALLREQ=100;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ENTERLIVEHALLRSP=101;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//退出大厅请求，返回
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	EXITLIVEHALLREQ=102;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	EXITLIVEHALLRSP=103;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//进入一个直播房间请求，返回，同�?	ENTERLIVEROOMREQ=104;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ENTERLIVEROOMRSP=105;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ENTERLIVEROOMSYNC=106;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//退出一个直播房间请求，返回，同�?	EXITLIVEROOMREQ=107;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	EXITLIVEROOMRSP=108;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	EXITLIVEROOMSYNC=109;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//移动位置请求，返回，同步
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	MOVEPOSITIONREQ=110;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	MOVEPOSITIONRSP=111;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	MOVEPOSITIONSYNC=112;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//说话状态请求，返回，同�?	TALKINGREQ=113;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	TALKINGRSP=114;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	TALKINGSYNC=115;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: }
+case ENetworkMessage.ENTER_LIVEHALL_RSP: package protocol;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: option javapackage = "com.levr.live.protocol";
+case ENetworkMessage.ENTER_LIVEHALL_RSP: enum ENetworkMessage{
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     KEEPALIVESYNC=0;
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     REGISTERREQ=1;
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     REGISTERRSP=2;
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     LOGINREQ=3;
+case ENetworkMessage.ENTER_LIVEHALL_RSP:     LOGINRSP=4;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	PERSONALSETTINGSREQ=5;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	PERSONALSETTINGSRSP=6;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETUSERINFOREQ=7;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETUSERINFORSP=8;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ADDFRIENDREQ=9;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ADDFRIENDRSP=10;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	DELETEFRIENDREQ=11;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	DELETEFRIENDRSP=12;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	OFFLINESYNC=13;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	LOGOUTREQ=14;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	LOGOUTRSP=15;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETPERSONALINFOREQ=16;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETPERSONALINFORSP=17;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CHANGEFRIENDSYNC=18;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	SENDCHATREQ=19;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	SENDCHATRSP=20;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	RECEIVECHATSYNC=21;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CREATEGROUPCHAT
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CREATEGROUPCHAT
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CHANGEGROUPREQ=24;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CHANGEGROUPRSP=25;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	CHANGEGROUPSYNC=26;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETGROUPINFO
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	GETGROUPINFO
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//进入大厅请求，返�?	ENTERLIVEHALLREQ=100;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ENTERLIVEHALLRSP=101;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//退出大厅请求，返回
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	EXITLIVEHALLREQ=102;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	EXITLIVEHALLRSP=103;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//进入一个直播房间请求，返回，同�?	ENTERLIVEROOMREQ=104;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ENTERLIVEROOMRSP=105;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	ENTERLIVEROOMSYNC=106;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//退出一个直播房间请求，返回，同�?	EXITLIVEROOMREQ=107;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	EXITLIVEROOMRSP=108;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	EXITLIVEROOMSYNC=109;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//移动位置请求，返回，同步
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	MOVEPOSITIONREQ=110;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	MOVEPOSITIONRSP=111;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	MOVEPOSITIONSYNC=112;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	//说话状态请求，返回，同�?	TALKINGREQ=113;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	TALKINGRSP=114;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: 	TALKINGSYNC=115;
+case ENetworkMessage.ENTER_LIVEHALL_RSP: }

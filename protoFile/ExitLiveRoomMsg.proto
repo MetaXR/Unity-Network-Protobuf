@@ -1,0 +1,20 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+import "UserData.proto";
+
+message ExitLiveRoomReq{
+	required string userId = 1; // 用户id
+}
+message ExitLiveRoomRsp{
+	enum ResultCode{
+    	SUCCESS = 0;
+		FAIL = 1;
+	}
+	required ResultCode resultCode = 1;
+	optional string resultMessage = 2;
+}
+
+message ExitLiveRoomSync{
+	required UserItem user = 1; // 直播房间内退出的用户
+}

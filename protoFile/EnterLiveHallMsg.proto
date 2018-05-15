@@ -1,0 +1,24 @@
+package protocol;
+
+option java_package = "com.levr.live.protocol.Msg";
+import "LiveData.proto";
+
+message EnterLiveHallReq{
+	required string userId= 1;
+	required string userPassword= 2;
+}
+
+message EnterLiveHallRsp{
+	enum ResultCode{
+    	SUCCESS = 0;
+		FAIL = 1;
+	}
+
+	required ResultCode resultCode = 1;
+	optional string resultMessage = 2;
+	repeated LiveItem liveItems = 3; 
+}
+
+message EnterLiveHallSync{
+	repeated LiveItem liveItems = 1;
+}
